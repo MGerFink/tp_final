@@ -6,7 +6,7 @@
      "Obs": "semillas",
      "Stock": 100,
      "Sold": 5,
-     "URLimg": "../media/Sales\/semillas1.webp"
+     "URLimg": "{% static '/media/Sales/semillas1.webp' %}"
     },
     {
      "IDp": 10000002,
