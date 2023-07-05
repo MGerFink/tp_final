@@ -32,11 +32,7 @@ const Core ={
             
             console.log(this);
 
-        },
-
-        delimeters : [
-            "--", "--"
-        ]
+        }
     }
 };
 
