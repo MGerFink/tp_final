@@ -9,8 +9,11 @@ const Core ={
 
        
     },
+    
+    delimiters: [
+        "--", "--"
+    ],
 
-  
     methods:{
         searchapi:function() {
             fetch(config.URI)
