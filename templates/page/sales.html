@@ -48,15 +48,16 @@
             <div id="Gsales">
             <div v-if="produs !== null">
             <div v-for="p in produs">
+                
                 <h3>-- p.Descrip --</h3>
                  
                 <div>
+                
                     <img :src=p.URLimg :alt="p.Descrip"/>
-                     <p>-- p.Price --</p>
-                <h3>-- p.Descrip --</h3>
+                    <p>-- p.Price --</p>
+                
                  <div>
-                    <img :src=p.URLimg :alt="p.Descrip"/>
-                     <p>-- p.Price --</p>
+                    
                         <div v-if="p.Stock!=0">
                             <button class="buybut">Comprar</button>
                         </div>
