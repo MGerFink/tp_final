@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content%}
+      
+        <div id="navegacion">
+            <nav align="center">
+                <ul type="none">
+                    <br>
+                <li><a href="{% url 'landing' %}"> INICIO </a></li>
+                <li><a href="{% url 'quienes_somos' %}"> ¿Quienes somos?</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    
+
+    <main>
+    <hr/>
+    <center>
+            
+        <div id="ProdApp">
+         
+            <hr>
+            <div id="Gsales">
+            
+                <div>
+                    {% for p in producto_list %}
+                    <div>
+                        <a href="{% url 'productos:detail' p.IDp %}">
+                        <h3>{{p.Descrip}}</h3>
+                 
+                        <div>
+                
+                                <img src="{{p.URLimg}}" :alt="{{p.Descrip}}">
+                                <p>{{p.Price}}</p>
+                
+                            <div>
+                    
+                                <div v-if="p.Stock!=0">
+                                    <button class="buybut">Comprar</button>
+                                </div>
+                                <div v-else><p>SIN STOCK!</p></div>
+                            </div>
+                        </div>
+                        </a>>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </center>
+        
+        </main>
+    <hr>
+    
+{% endblock %}
