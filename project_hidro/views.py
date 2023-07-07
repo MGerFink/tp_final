@@ -11,3 +11,6 @@ class QuienesSomos(TemplateView):
 
 class Sales(TemplateView):
     template_name = "page/sales.html"
+
+class ShowData(TemplateView):
+    template_name = "page/show_data.html"    
