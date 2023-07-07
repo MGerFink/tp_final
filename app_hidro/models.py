@@ -2,8 +2,9 @@ from django.db import models
 
 class Producto (models.Model):
     class Meta:
-        d_table= "lista_productos"
-    IDp=models.IntegerField(blank=False,null, primary_key=True)
+        db_table= "lista_productos"
+
+    IDp=models.IntegerField(blank=False,null=False, primary_key=True)
     Descrip=models.CharField(max_length=200)
     Price=models.FloatField(blank=True,null=False)
     Obs=models.CharField(max_length=200)
@@ -11,11 +12,12 @@ class Producto (models.Model):
     Sold=models.FloatField(blank=True,null=False)
     URLimg=models.CharField(max_length=200)
 
-    def __str__():
+
+    def __str__(self):
         return f"El producto: {self.Descrip} codigo {self.IDp} con Stock de {self.Stock}"
 
-    def obtener_campos_valores(self):
+    def get_fields(self):
         return [
-            (field.verbose_name, field.value_from_object(self)
-             for field in self.__class__._meta.fields[1:])
+            (field.verbose_name, field.value_from_object(self))
+             for field in self.__class__._meta.fields[1:]
         ]

@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+APPS_CUSTOM=[
+    "app_hidro"
+]
+
+INSTALLED_APPS += APPS_CUSTOM
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
