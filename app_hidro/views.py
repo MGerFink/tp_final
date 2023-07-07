@@ -15,8 +15,8 @@ class ProductosList(ProductosBaseView, ListView):
     ...
 
 class ProductosDetail(ProductosBaseView, DetailView):
-    tempate_name="detail.html"
-
+    template_name="producto_detail.html"
+   
 class ProductosCreate(ProductosBaseView, CreateView):
     template_name = "producto_create.html"
 extra_content = {

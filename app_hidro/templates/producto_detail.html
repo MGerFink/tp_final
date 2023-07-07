@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+      
+        <div id="navegacion">
+            <nav align="center">
+                <ul type="none">
+                    <br>
+                <li><a href="{% url 'landing' %}"> INICIO </a></li>
+                <li><a href="{% url 'quienes_somos' %}"> ¿Quienes somos?</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    
+
+    <main>
+    <hr/>
+    <center>
+            
+        <div id="ProdApp">
+         
+            <hr>
+            <div>
+            
+                <div>                                     
+                    <h3>{{producto.Descrip}}</h3>
+                    
+                    {% for label, value in vino.get_fields %}
+
+                    <p>{{label | upper}}</p>
+                    <p>{{value}}</p>
+
+                    {% endfor %}
+
+                    
+                    <img src="{{producto.URLimg}}" :alt="{{p.Descrip}}">
+
+                    <p>{{producto.Obs}}</p>
+                                    
+                    <p>$ {{producto.Price}}</p>                             
+                        
+                    <div>
+                        <button class="buybut">Comprar</button>
+                    </div>
+                    <p>Stock : {{producto.Stock}}</p>
+                </div>
+                <a href="{% url 'productos:all' %}">Volver</a>
+            </div>
+                
+        </div>
+                   
+      
+    </center>
+        
+        </main>
+    <hr>
+    
+{% endblock %}

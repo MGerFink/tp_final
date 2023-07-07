@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{%block content%}
+{% block content %}
       
         <div id="navegacion">
             <nav align="center">
@@ -37,6 +37,10 @@
                                 <p>{{p.Price}}</p>
                 
                             <div>
+                                <span>
+                                    <label for="">Borrar: </label>
+                                    <a href="{% url 'productos:delete' p.IDp %}">+</a>
+                                </span>
                     
                                 <div v-if="p.Stock!=0">
                                     <button class="buybut">Comprar</button>
