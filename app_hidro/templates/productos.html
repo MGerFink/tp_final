@@ -23,7 +23,7 @@
         <div id="ProdApp">
          
             <hr>
-            <div id="Gsales">
+            <div id="productos">
             
                 <div>
                     {% for p in producto_list %}
@@ -34,21 +34,18 @@
                         <div>
                 
                                 <img src="{{p.URLimg}}" :alt="{{p.Descrip}}">
-                                <p>{{p.Price}}</p>
+                                <p>${{p.Price}}</p>
                 
                             <div>
-                                <span>
-                                    <label for="">Borrar: </label>
-                                    <a href="{% url 'productos:delete' p.IDp %}">+</a>
-                                </span>
+                               
                     
                                 <div v-if="p.Stock!=0">
                                     <button class="buybut">Comprar</button>
                                 </div>
-                                <div v-else><p>SIN STOCK!</p></div>
+                               <!-- <div v-else><p>SIN STOCK!</p></div>-->
                             </div>
                         </div>
-                        </a>>
+                    </a>
                     </div>
                     {% endfor %}
                 </div>

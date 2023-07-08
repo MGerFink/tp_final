@@ -5,6 +5,7 @@ body{
 main{
     width: 100%;
     background-color: white;
+    height: fit-content;
 }
 
 h1{
@@ -111,7 +112,7 @@ section img:hover{
 footer{
      
     background-color: rgba(67, 201, 67, 0.487); 
-    width: 100%
+    width: 100%;
 }
 
 .redes{

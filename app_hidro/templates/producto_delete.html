@@ -1,16 +1,20 @@
 {% extends 'base.html' %} {% block content %}
 
 <main>
-    <div >
-        <h1>Estas seguro ue deseas borrar este vino?</h1>
-        <h2>{{p.Descrip}}</h2>
-        <form method="post">
+    <div class="delete">
+        <center>
+            <h1>¿Estas seguro que deseas borrar este producto?:</h1>
+            <h2>{{producto.Descrip}}</h2>
+            <img src="{{producto.URLimg}}" :alt="{{producto.Descrip}}">
+            <form method="post">
             {% csrf_token %}
             <div>{{form.as_p}}</div>
-            <input type="submit" value="{{ tipo }}" />
+            <input type="submit" value="{{ Tipo }} Borrar" />
         </form>
+        <br>
 
         <a href="{% url 'productos:all' %}">Cancelar</a>
     </div>
+</center>
 </main>
 {% endblock %}
