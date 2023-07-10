@@ -1,6 +1,4 @@
-# proyecto-hidroponia[grupoHidro🌿 
-
-Proyecto sitio web “Hidroponikatz”
+# proyecto-hidroponia GrupoHidro🌿  Proyecto sitio web “Hidroponikatz”
 
 Participantes:
 Maria Celeste Gómez (mceleste.gomez30@gmail.com ),
@@ -45,3 +43,15 @@ una API. Marcos aplicó responsividad a la página de “Contacto”, mediante e
 queries, con ajustes para laptop, tablet y phone con los archivos correspondientes en CSS.
 
 En la página de ventas se dirige a una app. que contiene un CRUD integrado mediente Django.
+
+
+TRABAJO FINAL INTEGRADOR (TFI)
+
+En este trabajo final integrador, como se comentó, se utilizó la implementación de django views
+para genear rutas y colocar los endpoints para que internamente reconozca los paths que el proyecto requiere.
+
+Se levantaron los arhcivos estáticos que se requieren para la parte funcional y estética del proyecto.
+
+Se creó un CRUD con una app de django, integrado con el front en la página de ventas, productos.
+
+Se generaron los API rest.
