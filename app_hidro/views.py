@@ -14,6 +14,9 @@ class ProductosBaseView(View):
 class ProductosList(ProductosBaseView, ListView):
     ...
 
+class ProductosEdit(ProductosBaseView, ListView):
+    template_name="producto_edit.html"
+
 class ProductosDetail(ProductosBaseView, DetailView):
     template_name="producto_detail.html"
    

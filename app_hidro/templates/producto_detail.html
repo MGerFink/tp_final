@@ -20,7 +20,7 @@
     <hr/>
     <center>
             
-        <div id="ProdApp">
+        <div id="detail">
          
             <hr>
             <div>
@@ -41,11 +41,11 @@
                     <p>{{producto.Obs}}</p>
                                     
                     <p>$ {{producto.Price}}</p>                             
-                        
+                    
                     <div>
                         <button class="buybut">Comprar</button>
                     </div>
-                    <p>Stock : {{producto.Stock}}</p>
+                    <p class="stock">Stock : {{producto.Stock}}</p>
                 </div>
                 <a href="{% url 'productos:all' %}">Volver</a>
             </div>

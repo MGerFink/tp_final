@@ -27,32 +27,40 @@
             
                 <div>
                     {% for p in producto_list %}
+                    
                     <div>
                         <a href="{% url 'productos:detail' p.IDp %}">
-                        <h3>{{p.Descrip}}</h3>
+                            <h3>{{p.Descrip}}</h3>
                  
-                        <div>
-                
-                                <img src="{{p.URLimg}}" :alt="{{p.Descrip}}">
-                                <p ckass="precio">${{p.Price}}</p>
-                
                             <div>
-                               
+                                
+                                <img src="{{p.URLimg}}" :alt="{{p.Descrip}}">
+                                <p>${{p.Price}}</p>      
                     
-                                <div v-if="p.Stock!=0">
-                                    <button class="buybut">Comprar</button>
-                                </div>
-                               <!-- <div v-else><p>SIN STOCK!</p></div>-->
+                                    
                             </div>
+                            
+                        </a>
+                        <div>
+                           
+                            <span>
+                                <label for="">Editar: </label>
+                                <a href="{% url 'productos:update' p.IDp %}"><h4>+</h4></a>
+                            </span>
+                            <span>
+                                <label for="">Borrar: </label>
+                                <a href="{% url 'productos:delete' p.IDp %}"><h4>+</h4></a>
+                            </span>
+                   
                         </div>
-                    </a>
-                    </div>
+                    </div> 
                     {% endfor %}
-                </div>
-                <br>
-                <a href="{% url 'productos:edit' %}"><h3>Editar</h3></a>
+                    <br>
+                    
             </div>
         </div>
+        <br>
+        <a id="create", href="{% url 'productos:all' %}"><h3>VOLVER A PRODUCTOS</h3></a>
     </center>
         
         </main>

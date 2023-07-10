@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+
+<main>
+    <div class="create">
+        <center>
+            
+                <h1>CREAR PRODUCTO</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <div>{{form.as_p}}</div>
+                    <input type="submit" value="{{ tipo }} Crear" />
+                </form>
+        
+                
+            
+        <br>
+
+        <a href="{% url 'productos:all' %}">Cancelar</a>
+    </div>
+</center>
+</main>
+{% endblock %}

@@ -51,6 +51,7 @@
     transform: scale(1.3);
 }
 
+
 .buybut{
     background: rgb(235, 235, 237);
     background: linear-gradient(0deg, rgb(108, 156, 234) 0%, rgb(117, 193, 125) 50%);
@@ -67,4 +68,18 @@
 .delete>center>h1{
    color: black;
     
+}
+.create{
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+}
+
+#detail div div p{
+    text-align: center;
+    font-size:4vh;
+}
+#detail div div .stock{
+    text-align: center;
+    font-size:2vh;
 }

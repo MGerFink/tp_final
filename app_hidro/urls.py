@@ -4,7 +4,8 @@ from .views import ProductosList\
                               ,ProductosDetail\
                                 ,ProductosCreate\
                                   ,ProductosUpdate\
-                                      ,ProductosDelete
+                                      ,ProductosDelete\
+                                        ,ProductosEdit
 
 app_name = "productos"
 
@@ -14,4 +15,5 @@ urlpatterns = [
     path("create/", ProductosCreate.as_view(), name = "create"),
     path("<int:pk>/update/", ProductosUpdate.as_view(), name = "update"),
     path("<int:pk>/delete/", ProductosDelete.as_view(), name = "delete"),
+    path("edit/", ProductosEdit.as_view(),name= "edit")
 ]
