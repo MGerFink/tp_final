@@ -42,7 +42,7 @@ Maximiliano desarrolló la página de ventas (productos) con Grid, mediante la u
 una API. Marcos aplicó responsividad a la página de “Contacto”, mediante el uso de media
 queries, con ajustes para laptop, tablet y phone con los archivos correspondientes en CSS.
 
-En la página de ventas se dirige a una app. que contiene un CRUD integrado mediente Django.
+En la página de ventas se dirige a una app. que contiene un CRUD integrado mediante Django.
 
 
 TRABAJO FINAL INTEGRADOR (TFI)
